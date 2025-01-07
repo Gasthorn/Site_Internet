@@ -6,9 +6,16 @@
         <link href="style.css" rel="stylesheet" media="all">
     </head>
     <body>
-        <div class="logo">Insérer Logo</div>
-        <div class="Titre"><h1>Site De Protection Des Chats</h1></div>
-        <div class="bandeau">Créer tableau de menu</div>
-        <div class="tableau"></div>
+        <div class="logo"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></div>
+        <div class="Titre"><h1>Site De Protection Des Chats</h1></div><br>
+        <br><br><br>
+        <form class="connection" action = "traitement.php" method="post">
+            login : <input type="text" name="login"><br>
+            mot de passe : <input type="password" name="password"><br><br>
+            nom : <input type="text" name="nom"><br>
+            prenom : <input type="text" name="prenom"><br>
+            <input type="submit" value="Connection"><br>
+            <input type="submit" value="Créer un compte"><br>
+        </form>
     </body>
 </html>
