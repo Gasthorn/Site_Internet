@@ -1,0 +1,27 @@
+.logo{
+	background-color:#76c4eb;
+	height:50px;
+    width:10%;    
+    margin-left:5px;
+    margin-top:5px;
+}
+.Titre{
+	background-color:#eaf0ed;
+	height:5%;
+    margin:auto;
+    width:75%;
+    text-align: center;
+}
+.bandeau{
+	background-color:#43F09C;
+	height:50px;
+}
+.tableau{
+	background-color:#caf043;
+	height:100px;
+}
+h1 {
+    font-size: 200%; 
+    color: #000000; 
+    text-align: center;
+}
