@@ -8,8 +8,8 @@
     <body>
     <?php
         $server = "localhost:3306";
-        $user = "root";
-        $pwd = "";
+        $user = "root";				//identifiant de la fac si pc ensim
+        $pwd = "";					//mdp de la fac si pc ensim
         $db = "base_chat";
 
         $mysqli = new mysqli($server, $user, $pwd, $db);

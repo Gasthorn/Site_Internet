@@ -43,12 +43,12 @@
 }
 .tableau{
 	background-color:#caf043;
-    text-align: center;   
+    text-align: center; 
 }
 .case{
     height: 250px;
     background-color: #eaf0ed;
-    margin:3px;
+    margin:10px;
 }
 h1 {
     font-size: 200%; 
