@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `chats` (
 
 insert into chats values 
 (1,'Rhéa',1,'Calico','Joueur','F','Rhea.jpg'),
-(2,'Cléo',2,'Calico','Gourmand','F','cleo.jpg'),
+(2,'Cléo',2,'Calico','Gourmand','F','cleo.jpeg'),
 (3,'Fripouille',5,'Blanc','Dormeur','M','fripouille.jpg'),
 (4,'Courgette',3,'Orange','Joueur','M','courgette.jpg'),
 (5,'Peach',14,'Calico','Actif','F','peach.jpg'),

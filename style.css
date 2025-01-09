@@ -22,47 +22,61 @@
 .recherche{
     float:right;
 }
-@media screen and (min-width:1024px){
+@media screen and (min-width:1720px){
     .tableau{
-        display: grid;
-        width: 1000px;
-        grid-template-columns: 180px 180px 180px 180px 180px;
-        align-items: start;
-        justify-content: space-between;
+        width: 1700px;
+        grid-template-columns: 220px 220px 220px 220px 220px 220px;
     }
 }
-@media screen and (min-width:760px) and (max-width:1024px){
+@media screen and (min-width:1440px) and (max-width:1720px){
     .tableau{
-        display: grid;
-        margin: auto;
-        width: 760px;
-        grid-template-columns: 180px 180px 180px 180px;
-        align-items: start;
-        justify-content: space-between;
+        width: 1360px;
+        grid-template-columns: 220px 220px 220px 220px 220px;
     }
 }
-@media screen and (max-width:760px){
+@media screen and (min-width:1080px) and (max-width:1440px){
+    .tableau{
+        width: 1080px;
+        grid-template-columns: 220px 220px 220px 220px;
+    }
+}
+@media screen and (min-width:720px) and (max-width:1080px){
+    .tableau{
+        width: 720px;
+        grid-template-columns: 220px 220px 220px ;
+    }
+}
+@media screen and (min-width:560px) and (max-width:720px){
 	.tableau{
-		display: grid;
-		margin: auto;
 		width: 560px;
-		grid-template-columns: 180px 180px 180px;
-		align-items: start;
-		justify-content: space-between;
+		grid-template-columns: 220px 220px ;
+	}
+}
+@media screen and (max-width:560px){
+	.tableau{
+		width: 260px;
+		grid-template-columns: 220px ;
 	}
 }
 .tableau{
-	background-color:#caf043;
+    display: grid;
+	background-color:#edf1db;
     text-align: center; 
-	margin: auto;
+    align-items: start;
+    margin: auto;
+    justify-content: space-between;
 }
 .case{
-    height: 280px;
+    height: 260px;
+    align-items: start;
     background-color: #eaf0ed;
-    margin:3px;
+    margin:5px;
 }
 h1 {
     font-size: 200%; 
     color: #000000; 
     text-align: center;
+}
+img{
+    margin: 3px; 
 }
