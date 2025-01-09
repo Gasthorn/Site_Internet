@@ -47,10 +47,10 @@
         </div>
         <div class="tableau">
             <?php
-            /*$server = "localhost:3306"; //sur ordinateur perso
+            $server = "localhost:3306"; //sur ordinateur perso
             $user = "root";
             $pwd = "";
-            $db = "base_chat";*/
+            $db = "base_chat";
 			
 			/*$server = "localhost"; //sur ordi ensim
             $user = "s172601";
