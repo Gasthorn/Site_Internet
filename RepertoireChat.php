@@ -47,10 +47,10 @@
         </div>
         <div class="tableau">
             <?php
-            /*$server = "localhost:3306"; //sur ordinateur perso
+            $server = "localhost:3306"; //sur ordinateur perso
             $user = "root";
             $pwd = "";
-            $db = "base_chat";*/
+            $db = "base_chat";
 			
 			/*$server = "localhost"; //sur ordi ensim
             $user = "s172601";
@@ -66,7 +66,7 @@
                 if($result->num_rows > 0){
                     echo "<div class='tableau'>";
                     while($row = $result->fetch_assoc()) {
-                        echo "<div class='case'><img src='".$row['photo']."' height='200' width='160'/><p>".$row["prenom"]."</p></div>";
+                        echo "<div class='case'><a href='Photos_Chats/PhotosCompletes/".$row['photo']."'><img src='Photos_Chats/Tetes/".$row['photo']."' height='220' width='220'/></a><p>".$row["prenom"]."</p></div>";
                       }
                 }
             }
