@@ -20,6 +20,7 @@
                 </select>
 				<select name="caractere">
                     <option value="*" selected="selected">Caractère</option>
+					<option value="actif">Actif</option>
 					<option value="affectueux">Affectueux</option>
                     <option value="dormeur">Dormeur</option>
 					<option value="joueur">Joueur</option>
@@ -28,7 +29,9 @@
                 </select> 
 				<select name="couleur">
                     <option value="*" selected="selected">Couleur</option>
+					<option value="bicolore">Bicolore</option>
                     <option value="blanc">Blanc</option>
+					<option value="brun">Brun</option>
 					<option value="calico">Calico</option>
 					<option value="gris">Gris</option>
 					<option value="noir">Noir</option>
