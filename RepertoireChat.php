@@ -52,18 +52,13 @@
             $pwd = "";
             $db = "base_chat";*/
 			
-			$server = "localhost"; /*sur ordi ensim*/
+			/*$server = "localhost"; //sur ordi ensim
             $user = "s172601";
             $pwd = "Bqq499tb";
-            $db = "chats";
+            $db = "s172601";*/
 
             $mysqli = new mysqli($server, $user, $pwd, $db);
-            if($mysqli){
-                $couleur = $_POST["couleur"];
-                $caractere = $_POST["caractere"];
-                $age = $_POST["age"];
-                $sexe = $_POST["sexe"];
-    
+            if($mysqli){    
                 $query = 'SELECT prenom, photo FROM chats';
 
                 $result = $mysqli->query($query);
@@ -71,7 +66,7 @@
                 if($result->num_rows > 0){
                     echo "<div class='tableau'>";
                     while($row = $result->fetch_assoc()) {
-                        echo "<div class='case'><img src='Image/".$row['image']."' height='200' width='160'/><p>".$row["prenom"]."</p>";
+                        echo "<div class='case'><img src='".$row['photo']."' height='200' width='160'/><p>".$row["prenom"]."</p></div>";
                       }
                 }
             }

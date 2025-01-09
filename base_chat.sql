@@ -47,40 +47,40 @@ CREATE TABLE IF NOT EXISTS `chats` (
   `caractere` text NOT NULL,
   `sexe` enum('M','F') NOT NULL,
   `photo` text NOT NULL
-)
+);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-insert into 'chats' values 
-(1,"Rhéa",1,"Calico","Joueur","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(2,"Cléo",2,"Calico","Gourmand","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(3,"Fripouille",5,"Blanc","Dormeur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(4,"Courgette",3,"Orange","Joueur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(5,"Peach",14,"Calico","Actif","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(6,"Léon",13,"Orange","Dormeur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(7,"Nougatine",7,"Brun","Affectueux","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(8,"Vroum",2,"Bicolore","Actif","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(9,"Pudding",6,"Gris","Gourmand","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(10,"Moka",3,"Brun","Timide","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(11,"Zorro",4,"Noir","Affectueux","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(12,"Saphir",2,"Gris","Affectueux","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(13,"Perle",6,"Blanc","Timide","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(14,"Pépito",4,"Bicolore","Joueur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(15,"Sir Meowington",8,"Brun","Dormeur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(16,"Tigri-Mignon",4,"Orange","Affectueux","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(17,"Câline",7,"Bicolore","Affectueux","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(18,"Catastrophe",2,"Noir","Joueur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(19,"Chat-perlipopette",4,"Blanc","Actif","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(20,"Patate",1,"Bicolore","Dormeur","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(21,"Miss Miaou",6,"Calico","Joueur","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(22,"Chipie",5,"Orange","Actif","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(23,"Pétale",9,"Gris","Gourmand","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(24,"Gaufrette",2,"Calico","Timide","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(25,"Patapouf",9,"Bicolore","Dormeur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(26,"Froussard",6,"Noir","Timide","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(27,"Zaza",5,"Gris","Dormeur","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(28,"Pif",4,"Blanc","Joueur","M",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(29,"Violette",10,"Bicolore","Affectueux","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
-(30,"Choupinette",11,"Calico","Timide","F",/*lien vers la photo qui sera stockee dans un dossier a part*/)
+insert into chats values 
+(1,'Rhéa',1,'Calico','Joueur','F','Photos_Chats/Rhea_grande_4.jpg'),
+(2,'Cléo',2,'Calico','Gourmand','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(3,'Fripouille',5,'Blanc','Dormeur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(4,'Courgette',3,'Orange','Joueur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(5,'Peach',14,'Calico','Actif','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(6,'Léon',13,'Orange','Dormeur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(7,'Nougatine',7,'Brun','Affectueux','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(8,'Vroum',2,'Bicolore','Actif','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(9,'Pudding',6,'Gris','Gourmand','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(10,'Moka',3,'Brun','Timide','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(11,'Zorro',4,'Noir','Affectueux','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(12,'Saphir',2,'Gris','Affectueux','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(13,'Perle',6,'Blanc','Timide','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(14,'Pépito',4,'Bicolore','Joueur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(15,'Sir Meowington',8,'Brun','Dormeur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(16,'Tigri-Mignon',4,'Orange','Affectueux','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(17,'Câline',7,'Bicolore','Affectueux','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(18,'Catastrophe',2,'Noir','Joueur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(19,'Chat-perlipopette',4,'Blanc','Actif','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(20,'Patate',1,'Bicolore','Dormeur','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(21,'Miss Miaou',6,'Calico','Joueur','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(22,'Chipie',5,'Orange','Actif','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(23,'Pétale',9,'Gris','Gourmand','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(24,'Gaufrette',2,'Calico','Timide','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(25,'Patapouf',9,'Bicolore','Dormeur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(26,'Froussard',6,'Noir','Timide','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(27,'Zaza',5,'Gris','Dormeur','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(28,'Pif',4,'Blanc','Joueur','M','Photos_Chats/Rhea_bebe_2.jpg'),
+(29,'Violette',10,'Bicolore','Affectueux','F','Photos_Chats/Rhea_bebe_2.jpg'),
+(30,'Choupinette',11,'Calico','Timide','F','Photos_Chats/Rhea_bebe_2.jpg');
