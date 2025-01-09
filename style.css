@@ -22,28 +22,39 @@
 .recherche{
     float:right;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1024px){
     .tableau{
-        display :grid;
+        display: grid;
         width: 1000px;
         grid-template-columns: 180px 180px 180px 180px 180px;
         align-items: start;
         justify-content: space-between;
     }
 }
-@media screen and (max-width:1024px) {
+@media screen and (min-width:512px and max-width:1024px){
     .tableau{
-        display :grid;
-        margin:auto;
+        display: grid;
+        margin: auto;
         width: 560px;
-        grid-template-columns: 180px 180px 180px;
+        grid-template-columns: 180px 180px 180px 180px;
         align-items: start;
         justify-content: space-between;
     }
 }
+@media screen and (max-width:512px){
+	.tableau{
+		display: grid;
+		margin: auto;
+		width: 560px;
+		grid-template-columns: 180px 180px 180px;
+		align-items: start;
+		justify-content: space-between;
+	}
+}
 .tableau{
 	background-color:#caf043;
-    text-align: center;   
+    text-align: center; 
+	margin: auto;
 }
 .case{
     height: 250px;
