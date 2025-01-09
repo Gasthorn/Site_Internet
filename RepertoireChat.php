@@ -11,26 +11,31 @@
         <br>
         <div class="bandeau">
             <form class="selection" action="traitement.php" method="post">
-                <select name="couleur">
-                    <option value="*" selected="selected">Couleur</option>
-                    <option value="gris">Gris</option>
-                    <option value="orange">Orange</option>
-                    <option value="calico">Calico</option>
-                </select>
-                <select name="caractere">
-                    <option value="*" selected="selected">Caractère</option>
-                    <option value="joueur">Joueur</option>
-                    <option value="dormeur">Dormeur</option>
-                    <option value="mangeur">Gros Mangeur</option>
-                </select>
                 <select name="age">
                     <option value="*" selected="selected">Age</option>
-                    <option value="lessFive">-5 ans</option>
+					<option value="lessTwo">Moins de 2 ans</option>
+                    <option value="twoToFive">De 2 à 5 ans</option>
                     <option value="fiveToTen">De 5 à 10 ans</option>
-                    <option value="moreTen">+10 ans</option>
+                    <option value="moreTen">Plus de 10 ans</option>
                 </select>
+				<select name="caractere">
+                    <option value="*" selected="selected">Caractère</option>
+					<option value="affectueux">Affectueux</option>
+                    <option value="dormeur">Dormeur</option>
+					<option value="joueur">Joueur</option>
+                    <option value="gourmand">Gourmand</option>
+					<option value="timide">Timide</option>
+                </select> 
+				<select name="couleur">
+                    <option value="*" selected="selected">Couleur</option>
+                    <option value="blanc">Blanc</option>
+					<option value="calico">Calico</option>
+					<option value="gris">Gris</option>
+					<option value="noir">Noir</option>
+                    <option value="orange">Orange</option>
+				</select>                               
                 <select name="sexe">
-                    <option value="*" selected="selected">Mâle et Femelle</option>
+                    <option value="*" selected="selected">Sexe</option>
                     <option value="M">Mâle</option>
                     <option value="F">Femelle</option>
                 </select>
@@ -39,10 +44,15 @@
         </div>
         <div class="tableau">
             <?php
-            $server = "localhost:3306";
+            /*$server = "localhost:3306"; //sur ordinateur perso
             $user = "root";
             $pwd = "";
-            $db = "base_chat";
+            $db = "base_chat";*/
+			
+			$server = "localhost"; /*sur ordi ensim*/
+            $user = "s172601";
+            $pwd = "Bqq499tb";
+            $db = "chats";
 
             $mysqli = new mysqli($server, $user, $pwd, $db);
             if($mysqli){
