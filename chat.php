@@ -19,12 +19,23 @@
 
         $mysqli = new mysqli($server, $user, $pwd, $db);
         if($mysqli){
-            $couleur = $_POST["couleur"];
-            $caractere = $_POST["caractere"];
-            $age = $_POST["age"];
-            $sexe = $_POST["sexe"];
+            $id = $_GET["id"];
 
-            $query = 'SELECT prenom, photo FROM chats WHERE couleur = ? AND caractere = ? AND age = ? AND sexe = ?';
+            $query = 'SELECT prenom, photo FROM chats WHERE id = ?';
+            $stmt = $mysqli->prepare($query);
+            $stmt->bind_param("i",$id);
+            $stmt->execute();
+            $stmt->store_result();
+
+            if($stmt->num_rows>0){
+                $stmt->bind_result($prenom,$photo);
+                $stmt->fetch();
+                echo"<img src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."' width='50%' height='26%'/>";
+            }
+            else{
+                echo'Erreur 404 : Chat introuvable';
+                echo'<p><a href="RepertoireChat.php">Retour</a></p>';
+            }
             
         }
         else {

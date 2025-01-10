@@ -59,14 +59,20 @@
 
             $mysqli = new mysqli($server, $user, $pwd, $db);
             if($mysqli){    
-                $query = 'SELECT prenom, photo FROM chats';
+                $query = 'SELECT id, prenom, photo FROM chats';
 
                 $result = $mysqli->query($query);
 
                 if($result->num_rows > 0){
                     echo "<div class='tableau'>";
                     while($row = $result->fetch_assoc()) {
-                        echo "<div class='case'><a href='Photos_Chats/PhotoCompletes/".$row["photo"]."'><img src='Photos_Chats/Tetes/".$row["photo"]."' height='200' width='200'/></a><p>".$row["prenom"]."</p></div>";
+                        echo "<div class='case'>
+                            <img src='Photos_Chats/Tetes/".$row["photo"]."' height='200' width='200'/>
+                            <form class='selection' action='chat.php' method='get'>
+                                <input type='submit' value='".$row["prenom"]."'>
+                                <input name='id' type='hidden' value='".$row["id"]."'>
+                            </form>
+                            </div>";
                       }
                 }
             }
