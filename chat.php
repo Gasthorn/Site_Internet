@@ -6,6 +6,8 @@
         <link href="style.css" rel="stylesheet" media="all">
     </head>
     <body>
+    <div class="logo"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></div>
+    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
     <?php
         $server = "localhost:3306"; //sur ordinateur perso
         $user = "root";
@@ -30,7 +32,12 @@
             if($stmt->num_rows>0){
                 $stmt->bind_result($prenom,$photo);
                 $stmt->fetch();
-                echo"<img src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."' width='50%' height='26%'/>";
+                echo"<div class='chat'>
+                    <a href='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'>
+                        <img class='image_reduite' src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'/>
+                    </a>
+                    <p class='txt_chat'>Paragraphe descriptif du chat à rajouter à la db</p>
+                </div>";
             }
             else{
                 echo'Erreur 404 : Chat introuvable';

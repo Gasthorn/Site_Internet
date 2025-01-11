@@ -72,6 +72,17 @@
     background-color: #eaf0ed;
     margin:5px;
 }
+.chat{
+    background-color: #caf043;
+    width:50%;
+    height:60%;
+    align-items: center;
+    text-align: center;
+    margin:auto;
+}
+.image_reduite{
+    height:50vh;
+}
 h1 {
     font-size: 200%; 
     color: #000000; 
