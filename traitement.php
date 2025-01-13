@@ -23,9 +23,50 @@
             $caractere = $_POST["caractere"];
             $age = $_POST["age"];
             $sexe = $_POST["sexe"];
-
-            $query = 'SELECT prenom, photo FROM chats WHERE couleur = ? AND caractere = ? AND age = ? AND sexe = ?';
             
+            if ($age=="lessTwo"){
+                $query = "SELECT id,prenom, photo FROM chats WHERE age <= 2";
+            }
+            else if ($age=="twoToFive"){
+                $query = "SELECT id,prenom, photo FROM chats WHERE age > 2 AND age <=5";
+            }
+            else if ($age=="fiveToTen"){
+                $query = "SELECT id,prenom, photo FROM chats WHERE age > 5 AND age <=10";
+            }
+            else if ($age=="moreTen"){
+                $query = "SELECT id,prenom, photo FROM chats WHERE age > 10";
+            }       
+            else if ($age == '*'){
+                $query = "SELECT id,prenom, photo FROM chats WHERE age > 0";
+            }   
+
+            if ($caractere != '*'){
+                $query .= " AND caractere = '".$caractere."'";
+            }
+            if ($couleur != '*'){
+                $query .= " AND couleur = '".$couleur."'";
+            }
+            if ($sexe != '*'){
+                $query .= " AND sexe = '".$sexe."'";
+            }
+            
+            $result = $mysqli->query($query);
+
+                if($result->num_rows > 0){
+                    echo "<div class='tableau'>";
+                    while($row = $result->fetch_assoc()) {
+                        echo "<div class='case'>
+                            <img src='Photos_Chats/Tetes/".$row["photo"]."' height='200' width='200'/>
+                            <form class='selection' action='chat.php' method='get'>
+                                <input type='submit' value='".$row["prenom"]."'>
+                                <input name='id' type='hidden' value='".$row["id"]."'>
+                            </form>
+                            </div>";
+                      }
+                }
+                else{
+                    echo"Aucun chat trouvé";
+                }
         }
         else {
             echo'<p>Erreur. Connection à la base de donnée impossible</p>';
