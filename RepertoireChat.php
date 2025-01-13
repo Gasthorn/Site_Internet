@@ -45,7 +45,6 @@
                 <input class="recherche" type="submit" value="Rechercher"><br>
             </form>
         </div>
-        <div class="tableau">
             <?php
             $server = "localhost:3306"; //sur ordinateur perso
             $user = "root";
@@ -81,7 +80,6 @@
             }
             $mysqli->close();
             ?>
-        </div>
         <br><br>
     </body>
 </html>
