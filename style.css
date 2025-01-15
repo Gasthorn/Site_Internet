@@ -21,6 +21,9 @@ input[type=select]{
     text-align: center;
 }
 .bandeau{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 	background-color:#43F09C;
     width:95%;
     margin:auto;

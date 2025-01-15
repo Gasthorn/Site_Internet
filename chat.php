@@ -21,7 +21,7 @@
 
         $mysqli = new mysqli($server, $user, $pwd, $db);
         if($mysqli){
-            $id = $_GET["id"];
+            $id = $_GET["Id"];
 
             $query = 'SELECT prenom, photo FROM chats WHERE id = ?';
             $stmt = $mysqli->prepare($query);

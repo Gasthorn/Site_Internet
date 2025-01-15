@@ -94,20 +94,23 @@
                 if($result->num_rows > 0){
                     echo "<div class='tableau'>";
                     while($row = $result->fetch_assoc()) {
-                        echo "<form class='selection' action='chat.php' method='get' id='chatForm'>
-                            <div class='case' onclick='submitForm()'>
+                        echo "
+                        <form class='selection' action='chat.php' method='get' id='chatForm".$row['id']."'>
+                            <div class='case' onclick='submitForm(".$row['id'].")'>
                                 <img src='Photos_Chats/Tetes/".$row["photo"]."' height='200' width='200'/>
                                 <p>".$row["prenom"]."</p>
-                                <input name='id' type='hidden' value='".$row["id"]."'>
+                                <input name='Id' type='hidden' value='".$row["id"]."'>
                             </div>
                         </form>
                         
                         <script>
-                            function submitForm() {
-                                document.getElementById('chatForm').submit();
+                            function submitForm(id) {
+                                var form = document.getElementById('chatForm' + id); // Sélectionne le formulaire correspondant
+                                form.submit(); // Soumet le formulaire
                             }
                         </script>";
                       }
+                    echo "</div>";
                 }
                 else{
                     echo"Aucun chat trouvé";
