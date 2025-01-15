@@ -6,8 +6,8 @@
         <link href="style.css" rel="stylesheet" media="all">
     </head>
     <body>
-        <div class="logo"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></div>
-        <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
+    <div class="logo"><a href="index.html"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
+    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
         <br>
         <div class="bandeau">
             <form class="selection" action="traitement.php" method="post">
@@ -65,13 +65,20 @@
                 if($result->num_rows > 0){
                     echo "<div class='tableau'>";
                     while($row = $result->fetch_assoc()) {
-                        echo "<div class='case'>
-                            <img src='Photos_Chats/Tetes/".$row["photo"]."' height='200' width='200'/>
-                            <form class='selection' action='chat.php' method='get'>
-                                <input type='submit' value='".$row["prenom"]."'>
+                        echo "
+                        <form class='selection' action='chat.php' method='get' id='chatForm'>
+                            <div class='case' onclick='submitForm()'>
+                                <img src='Photos_Chats/Tetes/".$row["photo"]."' height='200' width='200'/>
+                                <p>".$row["prenom"]."</p>
                                 <input name='id' type='hidden' value='".$row["id"]."'>
-                            </form>
-                            </div>";
+                            </div>
+                        </form>
+                        
+                        <script>
+                            function submitForm() {
+                                document.getElementById('chatForm').submit();
+                            }
+                        </script>";
                       }
                 }
             }
