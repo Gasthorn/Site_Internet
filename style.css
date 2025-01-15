@@ -1,3 +1,13 @@
+input[type=submit]{
+    background-color: #edbc97;
+    border:none;
+    cursor:pointer
+}
+input[type=select]{
+    background-color: #8c76a3;
+    border:none;
+    cursor:pointer;
+}
 .logo{
     width:20%;  
     margin-left:5px;
@@ -20,7 +30,7 @@
     text-align: center;    
 }
 .recherche{
-    float:right;
+    margin:10px;
 }
 @media screen and (min-width:1720px){
     .tableau{
@@ -71,6 +81,14 @@
     align-items: start;
     background-color: #eaf0ed;
     margin:5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.case:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.case input[type="submit"]{
+    display: none;
 }
 .chat{
     background-color: #caf043;

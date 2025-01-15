@@ -2,11 +2,11 @@
 <html lang="fr">
     <head>     
     	<meta charset="UTF-8">
-    	<title>Descriptif chat</title>
+    	<title>Site Officiel SPC</title>
         <link href="style.css" rel="stylesheet" media="all">
     </head>
     <body>
-    <div class="logo"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></div>
+    <div class="logo"><a href="index.html"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
         <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
         <br>
         <div class="bandeau">
