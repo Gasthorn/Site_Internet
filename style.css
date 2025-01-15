@@ -1,7 +1,7 @@
 input[type=submit]{
     background-color: #edbc97;
     border:none;
-    cursor:pointer
+    cursor:pointer;
 }
 input[type=select]{
     background-color: #8c76a3;
@@ -89,6 +89,7 @@ input[type=select]{
 .case:hover {
     transform: scale(1.1); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .chat{
     background-color: #caf043;
@@ -105,9 +106,6 @@ h1 {
     font-size: 200%; 
     color: #000000; 
     text-align: center;
-}
-img{
-    margin: 3px; 
 }
 p{
     margin:auto;
