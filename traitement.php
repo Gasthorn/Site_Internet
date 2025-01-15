@@ -6,7 +6,7 @@
         <link href="style.css" rel="stylesheet" media="all">
     </head>
     <body>
-    <div class="logo"><a href="index.html"><img src="Image/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
+    <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
         <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
         <br>
         <div class="bandeau">
@@ -44,6 +44,7 @@
                 </select>
                 <input class="recherche" type="submit" value="Rechercher"><br>
             </form>
+            <a href="RepertoireChat.php">Retour</a>
         </div>
     <?php
         $server = "localhost:3306"; //sur ordinateur perso
