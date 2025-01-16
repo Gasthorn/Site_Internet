@@ -55,11 +55,7 @@
                 $stmtInsert->execute();
             }
         }
-        echo "";
-        echo "<div style='text-align:center;'><h1>Merci à vous ".$name." de nous avoir donné l'accès à votre compte bancaire !<h1><div>";
-
-
-
+        echo "<div style='text-align:center;'><h1 style='text-shadow:2px 2px 0px rgba(255,255,255,0.7);'>Merci à vous ".$name." de nous avoir donné l'accès à votre compte bancaire !<h1><div>";
         $mysqli->close();
 	?>
 
