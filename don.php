@@ -18,14 +18,14 @@
     <body>
     <div class="container">
         <h1>Faire un don</h1>
-        <p>Votre générosité permet à la Société de Protection des Chats (SPC) de continuer sa mission. Merci pour votre soutien !</p>
+        <p>Votre générosité permet à la Société de Protection des Chats (SPC) de continuer sa mission. Merci pour votre soutien !</p><br>
         
         <form method="post" action="Remerciement.php">
             <label for="name">Nom complet :</label>
             <input type="text" id="name" name="name" placeholder="Votre nom" required><br>
             
             <label for="email">Adresse email :</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" required><br>
+            <input type="email" id="email" name="email" placeholder="Votre email" required><br><br>
             
             <label for="amount">Montant du don (€) :</label>
             <select id="amount" name="amount" required>
@@ -43,3 +43,4 @@
         </form>
     </div>
     </body>
+</html>

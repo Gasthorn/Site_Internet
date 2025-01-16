@@ -17,7 +17,7 @@
 
     <body>
     <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
-        <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
+    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
         <br>
         <div class="bandeau">
             <a href="index.html">Retour</a>
