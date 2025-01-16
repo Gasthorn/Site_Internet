@@ -28,6 +28,14 @@ input[type=select]{
     width:95%;
     margin:auto;
 }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .selection{
     margin: 5px;
     text-align: center;    
