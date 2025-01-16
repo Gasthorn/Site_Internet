@@ -17,7 +17,7 @@
 
     <body>
     <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
-        <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
+    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
         <br>
         <div class="bandeau">
             <a href="index.html">Retour</a>
@@ -57,15 +57,15 @@
             </form>
         </div>
     <?php
-        /*$server = "localhost:3306"; //sur ordinateur perso
+        $server = "localhost:3306"; //sur ordinateur perso
         $user = "root";
         $pwd = "";
-        $db = "base_chat";*/
+        $db = "s172601";
         
-        $server = "localhost"; //sur ordi ensim
+        /*$server = "localhost"; //sur ordi ensim
         $user = "s172601";
         $pwd = "Bqq499tb";
-        $db = "s172601";
+        $db = "s172601";*/
 
         $mysqli = new mysqli($server, $user, $pwd, $db);
         if($mysqli){

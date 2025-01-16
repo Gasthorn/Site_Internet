@@ -22,7 +22,7 @@
         $server = "localhost:3306"; //sur ordinateur perso
         $user = "root";
         $pwd = "";
-        $db = "base_chat";
+        $db = "s172601";
         
         /*$server = "localhost"; //sur ordi ensim
         $user = "s172601";
