@@ -33,20 +33,20 @@
         if($mysqli){
             $id = $_GET["Id"];
 
-            $query = 'SELECT prenom, photo FROM chats WHERE id = ?';
+            $query = 'SELECT prenom, photo, paragraphe FROM chats WHERE id = ?';
             $stmt = $mysqli->prepare($query);
             $stmt->bind_param("i",$id);
             $stmt->execute();
             $stmt->store_result();
 
             if($stmt->num_rows>0){
-                $stmt->bind_result($prenom,$photo);
+                $stmt->bind_result($prenom,$photo,$paragraphe);
                 $stmt->fetch();
                 echo"<div class='chat'>
                     <a href='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'>
                         <img class='image_reduite' src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'/>
                     </a>
-                    <p class='txt_chat'>Paragraphe descriptif du chat à rajouter à la db</p>
+                    <p class='txt_chat'>".htmlspecialchars($paragraphe)."</p>
                 </div>";
             }
             else{

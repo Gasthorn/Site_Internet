@@ -17,10 +17,11 @@
 
     <body>
     <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
-    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
+        <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
         <br>
         <div class="bandeau">
-            <form class="selection" action="traitement.php" method="post">
+            <a href="index.html">Retour</a>
+            <form class="selection" action="RepertoireChat.php" method="post">
                 <select name="age">
                     <option value="*" selected="selected">Age</option>
 					<option value="lessTwo">Moins de 2 ans</option>
@@ -55,22 +56,56 @@
                 <input class="recherche" type="submit" value="Rechercher"><br>
             </form>
         </div>
-            <?php
-            $server = "localhost:3306"; //sur ordinateur perso
-            $user = "root";
-            $pwd = "";
-            $db = "base_chat";
-			
-			/*$server = "localhost"; //sur ordi ensim
-            $user = "s172601";
-            $pwd = "Bqq499tb";
-            $db = "s172601";*/
+    <?php
+        /*$server = "localhost:3306"; //sur ordinateur perso
+        $user = "root";
+        $pwd = "";
+        $db = "base_chat";*/
+        
+        $server = "localhost"; //sur ordi ensim
+        $user = "s172601";
+        $pwd = "Bqq499tb";
+        $db = "s172601";
 
-            $mysqli = new mysqli($server, $user, $pwd, $db);
-            if($mysqli){    
-                $query = 'SELECT id, prenom, photo FROM chats';
+        $mysqli = new mysqli($server, $user, $pwd, $db);
+        if($mysqli){
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $couleur = $_POST["couleur"];
+                $caractere = $_POST["caractere"];
+                $age = $_POST["age"];
+                $sexe = $_POST["sexe"];
+                
+                if ($age=="lessTwo"){
+                    $query = "SELECT id,prenom, photo FROM chats WHERE age <= 2";
+                }
+                else if ($age=="twoToFive"){
+                    $query = "SELECT id,prenom, photo FROM chats WHERE age > 2 AND age <=5";
+                }
+                else if ($age=="fiveToTen"){
+                    $query = "SELECT id,prenom, photo FROM chats WHERE age > 5 AND age <=10";
+                }
+                else if ($age=="moreTen"){
+                    $query = "SELECT id,prenom, photo FROM chats WHERE age > 10";
+                }       
+                else if ($age == '*'){
+                    $query = "SELECT id,prenom, photo FROM chats WHERE age > 0";
+                }   
 
-                $result = $mysqli->query($query);
+                if ($caractere != '*'){
+                    $query .= " AND caractere = '".$caractere."'";
+                }
+                if ($couleur != '*'){
+                    $query .= " AND couleur = '".$couleur."'";
+                }
+                if ($sexe != '*'){
+                    $query .= " AND sexe = '".$sexe."'";
+                }
+            }
+            else {
+                $query = "SELECT id,prenom,photo FROM chats";
+            }
+            
+            $result = $mysqli->query($query);
 
                 if($result->num_rows > 0){
                     echo "<div class='tableau'>";
@@ -93,12 +128,15 @@
                       }
                     echo "</div>";
                 }
-            }
-            else {
-                echo'<p>Erreur. Connection à la base de donnée impossible</p>';
-            }
-            $mysqli->close();
-            ?>
-        <br><br>
+                else{
+                    echo"Aucun chat trouvé";
+                }
+        }
+        else {
+            echo'<p>Erreur. Connection à la base de donnée impossible</p>';
+        }
+        $mysqli->close();
+        
+	?>
     </body>
 </html>
