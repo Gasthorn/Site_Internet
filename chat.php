@@ -20,15 +20,10 @@
     <div class="Titre"><h1>Société De Protection Des Chats</h1></div>
     <div style="text-align:center;"><a href="RepertoireChat.php"><p>Retour au répertoire</p></a></div>
     <?php
-        $server = "localhost:3306"; //sur ordinateur perso
-        $user = "root";
-        $pwd = "";
-        $db = "s172601";
-        
-        /*$server = "localhost"; //sur ordi ensim
+        $server = "localhost"; 
         $user = "s172601";
         $pwd = "Bqq499tb";
-        $db = "s172601";*/
+        $db = "s172601";
 
         $mysqli = new mysqli($server, $user, $pwd, $db);
         if($mysqli){
@@ -44,16 +39,15 @@
                 $stmt->bind_result($prenom,$photo,$paragraphe);
                 $stmt->fetch();
                 echo"<div class='chat'>
-                    <h1>".htmlspecialchars($prenom)."</h1>
+                    <h1>".htmlspecialchars($prenom, ENT_QUOTES, 'UTF-8')."</h1>
                     <a href='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'>
                         <img class='image_reduite' src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'/>
                     </a>
-                    <p class='txt_chat'>".htmlspecialchars($paragraphe)."</p><br>
+                    <p class='txt_chat'>".htmlspecialchars($paragraphe, ENT_QUOTES, 'UTF-8')."</p><br>
                 </div>";
             }
             else{
                 echo'Erreur 404 : Chat introuvable';
-                echo'<p><a href="RepertoireChat.php">Retour</a></p>';
             }
             
         }

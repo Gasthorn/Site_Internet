@@ -16,16 +16,11 @@
     </head>
 
     <body style="background-image: url('Ressources/trollface.jpg'); background-size: cover; background-position: center center; background-attachment: fixed; background-repeat: no-repeat; height: 100vh; margin: 0;">
-    <?php
-        $server = "localhost:3306"; //sur ordinateur perso
-        $user = "root";
-        $pwd = "";
-        $db = "s172601";
-        
-        /*$server = "localhost"; //sur ordi ensim
+    <?php        
+        $server = "localhost"; 
         $user = "s172601";
         $pwd = "Bqq499tb";
-        $db = "s172601";*/
+        $db = "s172601";
 
         $mysqli = new mysqli($server, $user, $pwd, $db);
         if($mysqli){
