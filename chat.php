@@ -18,6 +18,7 @@
     <body>
     <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
     <div class="Titre"><h1>Société De Protection Des Chats</h1></div>
+    <div style="text-align:center;"><a href="RepertoireChat.php"><p>Retour au répertoire</p></a></div>
     <?php
         $server = "localhost:3306"; //sur ordinateur perso
         $user = "root";
@@ -47,7 +48,7 @@
                     <a href='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'>
                         <img class='image_reduite' src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'/>
                     </a>
-                    <p class='txt_chat'>".htmlspecialchars($paragraphe)."</p>
+                    <p class='txt_chat'>".htmlspecialchars($paragraphe)."</p><br>
                 </div>";
             }
             else{

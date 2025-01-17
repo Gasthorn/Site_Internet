@@ -56,7 +56,7 @@
             }
         }
         echo "<div style='text-align:center;'><h1 style='text-shadow:2px 2px 0px rgba(255,255,255,0.7);'>Merci à vous ".$name." de nous avoir donné l'accès à votre compte bancaire !<h1><div>";
-        echo "<a href='index.html'><p>Retour au menu</p></a>";
+        echo "<div style='position: absolute; bottom: 0; text-align:center;'><a href='index.html'><p>Retour au menu</p></a></div>";
         $mysqli->close();
 	?>
 
