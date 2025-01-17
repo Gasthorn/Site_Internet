@@ -8,10 +8,10 @@
         <?php
             $nav=$_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/Firefox/',$nav)){
-                echo '<link href="style_1.css" rel="stylesheet" media="all">';
+                echo '<link href="style_2.css" rel="stylesheet" media="all">';
             }
             else{
-                echo '<link href="style_2.css" rel="stylesheet" media="all">';
+                echo '<link href="style_1.css" rel="stylesheet" media="all">';
             }
         ?>
     </head>
@@ -75,18 +75,15 @@
             $mysqli = new mysqli($server, $user, $pwd, $db);
             if($mysqli){
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    // Définir les cookies avec un délai de 3 jours
                     setcookie("age", $_POST['age'], time() + (3 * 24 * 60 * 60), "/");
                     setcookie("caractere", $_POST['caractere'], time() + (3 * 24 * 60 * 60), "/");
                     setcookie("couleur", $_POST['couleur'], time() + (3 * 24 * 60 * 60), "/");
                     setcookie("sexe", $_POST['sexe'], time() + (3 * 24 * 60 * 60), "/");
                     
-                    // Redirection après la soumission pour appliquer les cookies
                     header("Location: " . $_SERVER['PHP_SELF']);
                     exit;
                 }
                 
-                // Initialisation des filtres avec les cookies
                 $age = isset($_COOKIE['age']) ? $_COOKIE['age'] : "*";
                 $caractere = isset($_COOKIE['caractere']) ? $_COOKIE['caractere'] : "*";
                 $couleur = isset($_COOKIE['couleur']) ? $_COOKIE['couleur'] : "*";
@@ -129,7 +126,7 @@
                     }
                     echo "</div>";
                 } else {
-                    echo "Aucun chat trouvé";
+                    echo "<p style='text-align:center;'>Aucun chat trouvé</p>";
                 }
             } else {
                 echo '<p>Erreur. Connexion à la base de données impossible</p>';

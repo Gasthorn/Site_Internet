@@ -7,17 +7,17 @@
         <?php
             $nav=$_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/Firefox/',$nav)){
-                echo '<link href="style_1.css" rel="stylesheet" media="all">';
+                echo '<link href="style_2.css" rel="stylesheet" media="all">';
             }
             else{
-                echo '<link href="style_2.css" rel="stylesheet" media="all">';
+                echo '<link href="style_1.css" rel="stylesheet" media="all">';
             }
         ?>
     </head>
   
     <body>
     <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
-    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
+    <div class="Titre"><h1>Société De Protection Des Chats</h1></div>
     <?php
         $server = "localhost:3306"; //sur ordinateur perso
         $user = "root";
@@ -43,6 +43,7 @@
                 $stmt->bind_result($prenom,$photo,$paragraphe);
                 $stmt->fetch();
                 echo"<div class='chat'>
+                    <h1>".htmlspecialchars($prenom)."</h1>
                     <a href='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'>
                         <img class='image_reduite' src='Photos_Chats/PhotoCompletes/".htmlspecialchars($photo)."'/>
                     </a>

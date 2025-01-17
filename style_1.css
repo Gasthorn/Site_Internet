@@ -1,5 +1,5 @@
 input[type=submit]{
-    background-color: #edbc97;
+    background-color: #07E36D;
     border:none;
     cursor:pointer;
 }
@@ -14,7 +14,7 @@ input[type=select]{
     margin-top:5px;
 }
 .Titre{
-	background-color:#caf043;
+	background-color:#07E3D7;
 	height:5%;
     margin:auto;
     width:75%;
@@ -24,7 +24,7 @@ input[type=select]{
     display: flex;
     align-items: center;
     justify-content: space-around;
-	background-color:#43F09C;
+	background-color:#07A8E3;
     width:95%;
     margin:auto;
 }
@@ -81,7 +81,7 @@ input[type=select]{
 }
 .tableau{
     display: grid;
-	background-color:#edf1db;
+	background-color:#68C5E6;
     text-align: center; 
     align-items: start;
     margin: auto;
@@ -90,7 +90,7 @@ input[type=select]{
 .case{
     height: 240px;
     align-items: start;
-    background-color: #eaf0ed;
+    background-color: #B2DEE5;
     margin:5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -100,7 +100,7 @@ input[type=select]{
     cursor: pointer;
 }
 .chat{
-    background-color: #caf043;
+    background-color: #B2DEE5;
     width:50%;
     height:60%;
     align-items: center;

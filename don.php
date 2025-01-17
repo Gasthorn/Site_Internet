@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php
             $nav=$_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/Firefox/',$nav)){
-                echo '<link href="style_1.css" rel="stylesheet" media="all">';
+                echo '<link href="style_2.css" rel="stylesheet" media="all">';
             }
             else{
-                echo '<link href="style_2.css" rel="stylesheet" media="all">';
+                echo '<link href="style_1.css" rel="stylesheet" media="all">';
             }
         ?>
     </head>
