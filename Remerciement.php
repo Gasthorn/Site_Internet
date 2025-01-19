@@ -16,18 +16,25 @@
     </head>
 
     <body style="background-image: url('Ressources/trollface.jpg'); background-size: cover; background-position: center center; background-attachment: fixed; background-repeat: no-repeat; height: 100vh; margin: 0;">
-    <?php        
+    <?php 
         $server = "localhost"; 
         $user = "s172601";
         $pwd = "Bqq499tb";
         $db = "s172601";
 
         $mysqli = new mysqli($server, $user, $pwd, $db);
-        if($mysqli){
+        if($mysqli){            
             $name = $_POST['name'];
             $email = $_POST['email'];
             $amount = $_POST['amount'] === 'other' ? $_POST['otherAmount'] : $_POST['amount'];
             $message = $_POST['message'];
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                setcookie("name", $name, time() + (3 * 24 * 60 * 60), "/");
+                setcookie("email", $email, time() + (3 * 24 * 60 * 60), "/");
+                setcookie("amount", $amount, time() + (3 * 24 * 60 * 60), "/");
+                setcookie("message", $message, time() + (3 * 24 * 60 * 60), "/");
+            }
 
             $query = "SELECT * FROM donateurs WHERE email = ?";
             $stmt = $mysqli->prepare($query);

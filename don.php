@@ -1,20 +1,8 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    setcookie("name", $_POST['name'], time() + (3 * 24 * 60 * 60), "/");
-    setcookie("email", $_POST['email'], time() + (3 * 24 * 60 * 60), "/");
-    setcookie("amount", $_POST['amount'], time() + (3 * 24 * 60 * 60), "/");
-    setcookie("message", $_POST['message'], time() + (3 * 24 * 60 * 60), "/");
-    
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>     
     	<meta charset="UTF-8">
     	<title>Don - SPC</title>
-
         <?php
             $nav=$_SERVER['HTTP_USER_AGENT'];
             if (preg_match('/Firefox/',$nav)){
@@ -27,6 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </head>
 
     <body>
+    <div class="logo"><a href="index.html"><img src="Ressources/spc.png" alt="Logo De La SPC" height="108" width="100"/></a></div>
+    <div class="Titre"><h1>Société De Protection Des Chats</h1></div><br>
     <div class="container">
         <h1>Faire un don</h1>
         <p>Votre générosité permet à la Société de Protection des Chats (SPC) de continuer sa mission. Merci pour votre soutien !</p><br>
@@ -51,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <button type="submit">Faire un don</button>
         </form>
-    </div>
+        </div><br>
+    <div style="text-align:center"><a href="index.html"><p>Retour au menu</p></a></div>
     </body>
 </html>
